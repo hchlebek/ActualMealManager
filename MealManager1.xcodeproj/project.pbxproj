@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F2F74861CD6BC5E00B634AC /* MyRecipesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F74851CD6BC5E00B634AC /* MyRecipesVC.swift */; settings = {ASSET_TAGS = (); }; };
-		3F2F74881CD6BCC100B634AC /* DiscoverRecipesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F74871CD6BCC100B634AC /* DiscoverRecipesVC.swift */; settings = {ASSET_TAGS = (); }; };
-		3F2F748A1CD6BCDB00B634AC /* ShoppingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F74891CD6BCDB00B634AC /* ShoppingListVC.swift */; settings = {ASSET_TAGS = (); }; };
+		3F2F74861CD6BC5E00B634AC /* MyRecipesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F74851CD6BC5E00B634AC /* MyRecipesVC.swift */; };
+		3F2F74881CD6BCC100B634AC /* DiscoverRecipesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F74871CD6BCC100B634AC /* DiscoverRecipesVC.swift */; };
+		3F2F748A1CD6BCDB00B634AC /* ShoppingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F74891CD6BCDB00B634AC /* ShoppingListVC.swift */; };
+		3F434D751CD7B71B008C9889 /* RecipeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F434D741CD7B71B008C9889 /* RecipeClass.swift */; };
+		3F434D791CD906E2008C9889 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F434D781CD906E2008C9889 /* CustomCell.swift */; };
 		3FEA589A1CD6B614000F03D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA58991CD6B614000F03D6 /* AppDelegate.swift */; };
 		3FEA589C1CD6B614000F03D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA589B1CD6B614000F03D6 /* ViewController.swift */; };
 		3FEA589F1CD6B614000F03D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEA589D1CD6B614000F03D6 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		3F2F74851CD6BC5E00B634AC /* MyRecipesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecipesVC.swift; sourceTree = "<group>"; };
 		3F2F74871CD6BCC100B634AC /* DiscoverRecipesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverRecipesVC.swift; sourceTree = "<group>"; };
 		3F2F74891CD6BCDB00B634AC /* ShoppingListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListVC.swift; sourceTree = "<group>"; };
+		3F434D741CD7B71B008C9889 /* RecipeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeClass.swift; sourceTree = "<group>"; };
+		3F434D781CD906E2008C9889 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3FEA58961CD6B614000F03D6 /* MealManager1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealManager1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEA58991CD6B614000F03D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEA589B1CD6B614000F03D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +111,9 @@
 				3FEA589B1CD6B614000F03D6 /* ViewController.swift */,
 				3F2F74851CD6BC5E00B634AC /* MyRecipesVC.swift */,
 				3FEA589D1CD6B614000F03D6 /* Main.storyboard */,
+				3F434D781CD906E2008C9889 /* CustomCell.swift */,
 				3F2F74871CD6BCC100B634AC /* DiscoverRecipesVC.swift */,
+				3F434D741CD7B71B008C9889 /* RecipeClass.swift */,
 				3F2F74891CD6BCDB00B634AC /* ShoppingListVC.swift */,
 				3FEA58A01CD6B614000F03D6 /* Assets.xcassets */,
 				3FEA58A21CD6B614000F03D6 /* LaunchScreen.storyboard */,
@@ -269,8 +275,10 @@
 			files = (
 				3F2F74861CD6BC5E00B634AC /* MyRecipesVC.swift in Sources */,
 				3F2F748A1CD6BCDB00B634AC /* ShoppingListVC.swift in Sources */,
+				3F434D751CD7B71B008C9889 /* RecipeClass.swift in Sources */,
 				3F2F74881CD6BCC100B634AC /* DiscoverRecipesVC.swift in Sources */,
 				3FEA589C1CD6B614000F03D6 /* ViewController.swift in Sources */,
+				3F434D791CD906E2008C9889 /* CustomCell.swift in Sources */,
 				3FEA589A1CD6B614000F03D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
