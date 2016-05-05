@@ -11,8 +11,7 @@ import UIKit
 class CustomCell: UITableViewCell
 {
     
-
-    @IBOutlet var name: UILabel!
+    @IBOutlet weak var name: UITextView!
     @IBOutlet var photo: UIImageView!
     
     
