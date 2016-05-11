@@ -23,16 +23,22 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5CW-bq-TeR"/>
+                    <navigationItem key="navigationItem" id="5CW-bq-TeR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="M1K-Ak-fze">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="Wi7-YB-WSk" id="bT6-f9-w1k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYU-cJ-enT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1307" y="245"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail My RecipesVC-->
         <scene sceneID="gWN-Es-DFI">
             <objects>
-                <viewController id="vV9-8H-vWc" sceneMemberID="viewController">
+                <viewController id="vV9-8H-vWc" customClass="DetailMyRecipesVC" customModule="MealManager1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gfc-pq-MB7"/>
                         <viewControllerLayoutGuide type="bottom" id="ldT-1y-A59"/>
@@ -149,7 +155,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HWm-lJ-olo"/>
+                    <navigationItem key="navigationItem" id="HWm-lJ-olo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="z3D-l0-pMT"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>

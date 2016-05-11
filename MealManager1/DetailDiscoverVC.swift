@@ -43,5 +43,12 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let recipeVC = segue.destinationViewController as! MyRecipesVC
+        
+        recipeVC.recipes = recipes
+        
+    }
     
 }

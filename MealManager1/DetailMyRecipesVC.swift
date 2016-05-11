@@ -1,16 +1,15 @@
 //
-//  MyRecipesVC.swift
+//  DetailMyRecipesVC.swift
 //  MealManager1
 //
-//  Created by HChlebek on 5/1/16.
+//  Created by HChlebek on 5/11/16.
 //  Copyright © 2016 HChlebek. All rights reserved.
 //
 
 import UIKit
 
-class MyRecipesVC: UIViewController
+class DetailMyRecipesVC: UIViewController
 {
-    var recipes : Recipe!
     
     override func viewDidLoad()
     {
@@ -18,12 +17,7 @@ class MyRecipesVC: UIViewController
         
     }
     
-    @IBAction func addButtonTapped(sender: UIBarButtonItem)
-    {
-        
-    }
     
     
     
 }
-
