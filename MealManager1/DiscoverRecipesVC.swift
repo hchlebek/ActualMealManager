@@ -43,14 +43,13 @@ class DiscoverRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
         return recipes.count
     }
     
-func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-{
-let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
-              cell.name.text = recipes[indexPath.row].name
-    cell.photo.image = recipes[indexPath.row].image
-          
-                 return cell
-            }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
+        cell.name.text = recipes[indexPath.row].name
+        cell.photo.image = recipes[indexPath.row].image
+        return cell
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
