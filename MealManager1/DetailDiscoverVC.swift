@@ -22,6 +22,8 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        detailTableViewIngredients.dataSource = self
+        detailTableViewIngredients.delegate = self
     
         detailImage.image = recipes.image
         detailTextViewInstructions.text! = recipes.instructions
@@ -35,10 +37,8 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("detailDiscover", forIndexPath: indexPath) as! CustomCell
-        
-        cell.name.text = recipes[indexPath.row].name
-        cell.photo.image = recipes[indexPath.row].image
+        let cell = self.detailTableViewIngredients.dequeueReusableCellWithIdentifier("detailDiscover", forIndexPath: indexPath)
+        cell.textLabel?.text = recipes.ingredientsArray[indexPath.row]
         
         return cell
     }
