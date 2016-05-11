@@ -12,7 +12,7 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
 {
     var recipes: Recipe!
     
-    @IBOutlet weak var detailScroll: UIScrollView!
+
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTextViewInstructions: UITextView!
     @IBOutlet weak var detailTableViewIngredients: UITableView!

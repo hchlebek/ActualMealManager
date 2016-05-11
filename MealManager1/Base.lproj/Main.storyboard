@@ -111,41 +111,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwf-IB-Kgw">
-                                <rect key="frame" x="20" y="72" width="560" height="471"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G76-1P-Vxj">
+                                <rect key="frame" x="0.0" y="64" width="340" height="487"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onG-EZ-FgG">
-                                        <rect key="frame" x="8" y="8" width="299" height="139"/>
-                                    </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Instructions: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FNA-Bl-7Xe">
-                                        <rect key="frame" x="8" y="149" width="206" height="143"/>
+                                        <rect key="frame" x="8" y="166" width="298" height="168"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onG-EZ-FgG">
+                                        <rect key="frame" x="8" y="8" width="242" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="242" id="Dw9-tj-vPw"/>
+                                            <constraint firstAttribute="height" constant="140" id="lbP-3p-oe1"/>
+                                        </constraints>
+                                    </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y6J-fN-iuV">
-                                        <rect key="frame" x="8" y="294" width="299" height="157"/>
+                                        <rect key="frame" x="1" y="351" width="312" height="289"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailDiscover" id="POr-MD-JmY">
-                                                <rect key="frame" x="0.0" y="28" width="299" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="312" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="POr-MD-JmY" id="A9F-sg-Hgz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="onG-EZ-FgG" firstAttribute="top" secondItem="G76-1P-Vxj" secondAttribute="top" constant="2" id="u4E-ae-QcP"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HWm-lJ-olo"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="detailImage" destination="onG-EZ-FgG" id="eON-Eb-E3j"/>
-                        <outlet property="detailScroll" destination="wwf-IB-Kgw" id="8mx-88-G4C"/>
                         <outlet property="detailTableViewIngredients" destination="y6J-fN-iuV" id="hbe-8W-S6e"/>
                         <outlet property="detailTextViewInstructions" destination="FNA-Bl-7Xe" id="TQC-0f-hI4"/>
                     </connections>
