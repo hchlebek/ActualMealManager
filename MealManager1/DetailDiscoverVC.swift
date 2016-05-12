@@ -10,7 +10,7 @@ import UIKit
 
 class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    var recipes: Recipe!
+    var recipes : Recipe!
     
 
     @IBOutlet weak var detailImage: UIImageView!
@@ -47,7 +47,7 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     {
         let recipeVC = segue.destinationViewController as! MyRecipesVC
         
-        recipeVC.recipes = recipes
+        recipeVC.data = recipes
         
     }
     
