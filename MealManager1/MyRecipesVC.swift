@@ -21,6 +21,9 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         myRecipesTableView.delegate = self
         
     }
+    override func viewDidAppear(animated: Bool) {
+        myRecipesTableView.reloadData()
+    }
     
     @IBAction func addButtonTapped(sender: UIBarButtonItem)
     {
