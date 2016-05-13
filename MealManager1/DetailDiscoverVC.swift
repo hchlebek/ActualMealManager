@@ -11,7 +11,6 @@ import UIKit
 class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     var recipes : Recipe!
-    
 
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTextViewInstructions: UITextView!
