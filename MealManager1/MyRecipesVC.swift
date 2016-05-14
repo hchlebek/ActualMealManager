@@ -10,6 +10,8 @@ import UIKit
 
 class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    
+    
     @IBOutlet var myRecipesTableView: UITableView!
     var recipes : [Recipe] = []
     var data : Recipe!

@@ -18,7 +18,9 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var detailTableViewIngredients: UITableView!
     
     
+    @IBOutlet var scrollView: UIScrollView!
     
+
     
     override func viewDidLoad()
     {
@@ -28,6 +30,8 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     
         detailImage.image = recipes.image
         detailTextViewInstructions.text! = recipes.instructions
+        
+        scrollView.contentSize.height = 1000
       
         
     }
