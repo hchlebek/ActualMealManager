@@ -46,6 +46,10 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
         let cell2 = self.detailTableViewIngredients.dequeueReusableCellWithIdentifier("detailDiscover", forIndexPath: indexPath)
         cell2.textLabel?.text = recipes.ingredientsArray[indexPath.row]
         
+        
+        cell2.textLabel?.numberOfLines = 0
+        
+        
         return cell2
     }
     

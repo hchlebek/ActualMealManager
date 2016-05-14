@@ -48,6 +48,7 @@ class DiscoverRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
         let cell1 = self.tableView.dequeueReusableCellWithIdentifier("discoverCell", forIndexPath: indexPath) as! CustomCell
         cell1.name.text = recipes[indexPath.row].name
         cell1.photo.image = recipes[indexPath.row].image
+        
         return cell1
     }
     

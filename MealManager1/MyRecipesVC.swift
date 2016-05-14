@@ -23,7 +23,7 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         myRecipesTableView.dataSource = self
         myRecipesTableView.delegate = self
         
-        recipes.append(Recipe(Name: data.name, Instructions: data.instructions, Ingredients: data.ingredientsArray, Image: data.image!))
+        // recipes.append(Recipe(Name: data.name, Instructions: data.instructions, Ingredients: data.ingredientsArray, Image: data.image!))
         
     }
     override func viewDidAppear(animated: Bool) {

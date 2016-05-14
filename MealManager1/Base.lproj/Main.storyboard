@@ -20,6 +20,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vV9-8H-vWc" kind="showDetail" id="fj2-1Q-mDo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -49,12 +52,57 @@
                     <view key="view" contentMode="scaleToFill" id="okp-Tk-3cP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAm-gr-UNG">
+                                <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CEn-mE-p2U">
+                                        <rect key="frame" x="0.0" y="0.0" width="337" height="607"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voM-4q-lsE">
+                                                <rect key="frame" x="8" y="8" width="240" height="128"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Instructions: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-wn-0nO">
+                                                <rect key="frame" x="8" y="149" width="309" height="192"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLd-5c-l0R">
+                                                <rect key="frame" x="8" y="360" width="309" height="227"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="kt9-4G-7hb">
+                                                        <rect key="frame" x="0.0" y="28" width="309" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kt9-4G-7hb" id="Q0O-18-6Xq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="43"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="vV9-8H-vWc" id="PMH-vg-uuu"/>
+                                                    <outlet property="delegate" destination="vV9-8H-vWc" id="f6u-I5-aQt"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                    </scrollView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myRecipeImageView" destination="voM-4q-lsE" id="982-3N-65c"/>
+                        <outlet property="myRecipeInstructions" destination="b2b-wn-0nO" id="tfT-1F-aW1"/>
+                        <outlet property="myRecipeScrollView" destination="CEn-mE-p2U" id="cKM-I5-OkC"/>
+                        <outlet property="myRecipeTableView" destination="aLd-5c-l0R" id="mGu-Sq-Kha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us0-Fb-qDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="-35"/>
+            <point key="canvasLocation" x="819" y="-35"/>
         </scene>
         <!--Discover RecipesVC-->
         <scene sceneID="zZ0-zj-2g5">
@@ -185,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Og8-Gz-awD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="761"/>
+            <point key="canvasLocation" x="1125" y="850"/>
         </scene>
         <!--Shopping ListVC-->
         <scene sceneID="tTq-VZ-x6B">
