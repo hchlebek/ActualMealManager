@@ -62,4 +62,11 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         return recipes.count
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let detailMyRecipesVC = segue.destinationViewController as! DetailMyRecipesVC
+        let selectedRow = myRecipesTableView.indexPathForSelectedRow?.row
+        detailMyRecipesVC.myRecipes = recipes[selectedRow!]
+    }
 }

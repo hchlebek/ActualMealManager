@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vV9-8H-vWc" kind="showDetail" id="fj2-1Q-mDo"/>
+                                    <segue destination="vV9-8H-vWc" kind="show" id="Buq-wz-nYQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,6 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zOL-Pe-5is"/>
                     <connections>
                         <outlet property="myRecipeImageView" destination="voM-4q-lsE" id="982-3N-65c"/>
                         <outlet property="myRecipeInstructions" destination="b2b-wn-0nO" id="tfT-1F-aW1"/>
@@ -102,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us0-Fb-qDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819" y="-35"/>
+            <point key="canvasLocation" x="820" y="-35"/>
         </scene>
         <!--Discover RecipesVC-->
         <scene sceneID="zZ0-zj-2g5">
@@ -233,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Og8-Gz-awD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="850"/>
+            <point key="canvasLocation" x="1085" y="985"/>
         </scene>
         <!--Shopping ListVC-->
         <scene sceneID="tTq-VZ-x6B">

@@ -11,6 +11,8 @@ import UIKit
 class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
+    var myRecipes : Recipe!
+    
     @IBOutlet var myRecipeImageView: UIImageView!
     @IBOutlet var myRecipeInstructions: UITextView!
     @IBOutlet var myRecipeTableView: UITableView!
@@ -25,17 +27,19 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
         
         myRecipeScrollView.contentSize.height = 1000
         
+        myRecipeImageView.image = myRecipes.image
+        myRecipeInstructions.text = myRecipes.instructions
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return recipes.ingredientsArray.count
+        return myRecipes.ingredientsArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell3 = self.myRecipeTableView.dequeueReusableCellWithIdentifier("detailDiscover", forIndexPath: indexPath)
-        cell3.textLabel?.text = recipes.ingredientsArray[indexPath.row]
+        cell3.textLabel?.text = myRecipes.ingredientsArray[indexPath.row]
         
         
         cell3.textLabel?.numberOfLines = 0
