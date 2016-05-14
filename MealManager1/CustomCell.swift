@@ -18,6 +18,8 @@ class CustomCell: UITableViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        
+        
     }
     
     
@@ -26,5 +28,8 @@ class CustomCell: UITableViewCell
     {
         super.setSelected(selected, animated: animated)
     }
+    
+    
+    
     
 }

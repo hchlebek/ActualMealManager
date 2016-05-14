@@ -45,10 +45,10 @@ class DiscoverRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
-        cell.name.text = recipes[indexPath.row].name
-        cell.photo.image = recipes[indexPath.row].image
-        return cell
+        let cell1 = self.tableView.dequeueReusableCellWithIdentifier("discoverCell", forIndexPath: indexPath) as! CustomCell
+        cell1.name.text = recipes[indexPath.row].name
+        cell1.photo.image = recipes[indexPath.row].image
+        return cell1
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

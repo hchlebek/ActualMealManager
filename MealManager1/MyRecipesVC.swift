@@ -23,6 +23,8 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         myRecipesTableView.dataSource = self
         myRecipesTableView.delegate = self
         
+        recipes.append(Recipe(Name: data.name, Instructions: data.instructions, Ingredients: data.ingredientsArray, Image: data.image!))
+        
     }
     override func viewDidAppear(animated: Bool) {
         myRecipesTableView.reloadData()
@@ -36,7 +38,7 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         let addAction = UIAlertAction(title: "Add", style: .Default) { (addAction) -> Void in
             let myRecipeTextField = myAlert.textFields! [0] as UITextField
-            self.recipes.append(Recipe(Name: myRecipeTextField.text!, Image: UIImage(named: "default")!))
+            self.recipes.append(Recipe(Name: myRecipeTextField.text!, Instructions: "", Ingredients: [], Image: UIImage(named: "default")!))
             self.myRecipesTableView.reloadData()
     
     }
