@@ -13,6 +13,7 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet var myRecipesTableView: UITableView!
     var recipes : [Recipe] = []
     var data : Recipe!
+    var newRecipe : [NewRecipe] = []
     
     override func viewDidLoad()
     {
