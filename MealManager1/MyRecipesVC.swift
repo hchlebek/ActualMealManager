@@ -48,6 +48,7 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         let myTableViewCell = myRecipesTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
         myTableViewCell.textLabel?.text = recipes[indexPath.row].name
+    
         
         return myTableViewCell
     }

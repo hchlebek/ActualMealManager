@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="pbS-OR-Oso">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pbS-OR-Oso" id="CZF-IK-b9N">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYU-cJ-enT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="-11"/>
+            <point key="canvasLocation" x="166" y="-35"/>
         </scene>
         <!--Detail My RecipesVC-->
         <scene sceneID="gWN-Es-DFI">
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us0-Fb-qDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-27"/>
+            <point key="canvasLocation" x="809" y="-35"/>
         </scene>
         <!--Discover RecipesVC-->
         <scene sceneID="zZ0-zj-2g5">
@@ -167,7 +167,7 @@
                     <navigationItem key="navigationItem" id="HWm-lJ-olo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z3D-l0-pMT">
                             <connections>
-                                <segue destination="Wi7-YB-WSk" kind="showDetail" id="XBm-1n-FYM"/>
+                                <action selector="addButtonTapped:" destination="hhW-Jz-xXp" id="HOC-sA-5DQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -385,7 +385,4 @@
         <image name="planner" width="24" height="24"/>
         <image name="recipes" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="XBm-1n-FYM"/>
-    </inferredMetricsTieBreakers>
 </document>

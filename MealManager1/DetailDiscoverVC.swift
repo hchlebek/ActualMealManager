@@ -18,6 +18,7 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     
     
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
     
         detailImage.image = recipes.image
         detailTextViewInstructions.text! = recipes.instructions
+      
         
     }
     
@@ -42,6 +44,31 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
         return cell
     }
     
+    
+    @IBAction func addButtonTapped(sender: UIBarButtonItem)
+    {
+        let myAlert = UIAlertController(title: "Add Recipe to My Recipes?", message: nil, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil)
+        //myAlert.addAction(cancelAction)
+        
+        //let addAction = UIAlertAction(title: <#T##String?#>, style: <#T##UIAlertActionStyle#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+    }
+    
+    func checkWhichDataToUse()
+    {
+        if recipes.name == "Roasted Potatoes"
+        {
+            
+        }
+        if recipes.name == ""
+        {
+            
+        }
+        if recipes.name == ""
+        {
+            
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         let recipeVC = segue.destinationViewController as! MyRecipesVC
@@ -49,5 +76,4 @@ class DetailDiscoverVC: UIViewController, UITableViewDataSource, UITableViewDele
         recipeVC.data = recipes
         
     }
-    
 }
