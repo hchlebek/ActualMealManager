@@ -57,20 +57,20 @@
                                 <rect key="frame" x="-20" y="24" width="326" height="927"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fts-1f-Jih">
-                                        <rect key="frame" x="91" y="169" width="99" height="30"/>
+                                        <rect key="frame" x="98" y="169" width="99" height="30"/>
                                         <state key="normal" title="Change Image"/>
                                         <connections>
                                             <action selector="myRecipeImageButtonTapped:" destination="vV9-8H-vWc" eventType="touchUpInside" id="hYK-6K-3i7"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOA-4i-nHU">
-                                        <rect key="frame" x="20" y="207" width="95" height="21"/>
+                                        <rect key="frame" x="27" y="207" width="95" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Txr-oG-dWt">
-                                        <rect key="frame" x="20" y="549" width="240" height="232"/>
+                                        <rect key="frame" x="27" y="549" width="240" height="232"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="fao-UA-u5b">
@@ -84,7 +84,7 @@
                                         </prototypes>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUY-4Z-yg8">
-                                        <rect key="frame" x="20" y="520" width="91" height="21"/>
+                                        <rect key="frame" x="27" y="520" width="91" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -96,11 +96,6 @@
                                             <action selector="myRecipeEditButtonTapped:" destination="vV9-8H-vWc" eventType="touchUpInside" id="Rbc-Ir-IOa"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-OS-svg">
-                                        <rect key="frame" x="20" y="789" width="137" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzE-Bn-cM7">
                                         <rect key="frame" x="177" y="789" width="30" height="30"/>
                                         <state key="normal" title="Add"/>
@@ -109,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-ip-aSx">
-                                        <rect key="frame" x="20" y="43" width="240" height="128"/>
+                                        <rect key="frame" x="27" y="42" width="240" height="128"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJn-kf-wV1">
                                         <rect key="frame" x="122" y="866" width="37" height="30"/>
@@ -119,11 +114,16 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V7R-QX-KbK">
-                                        <rect key="frame" x="20" y="226" width="247" height="286"/>
+                                        <rect key="frame" x="27" y="226" width="247" height="286"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-OS-svg">
+                                        <rect key="frame" x="27" y="789" width="137" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -336,45 +336,51 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JKx-Lz-4Hv" kind="show" id="Ys3-nL-b5f"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="aCm-uv-YgG"/>
                     <connections>
                         <outlet property="CalendarTableView" destination="6yp-ty-nhA" id="O9l-HG-yiq"/>
+                        <outlet property="calendarTableView" destination="6yp-ty-nhA" id="t1m-L5-PIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJ9-6P-Jj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="-942"/>
         </scene>
-        <!--Table View Controller-->
+        <!--MealsVC-->
         <scene sceneID="DaV-jE-xEK">
             <objects>
-                <tableViewController id="JKx-Lz-4Hv" sceneMemberID="viewController">
+                <tableViewController id="JKx-Lz-4Hv" customClass="MealsVC" customModule="MealManager1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="R4y-KQ-r9h">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UY3-Y7-u4w">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealsCell" id="UY3-Y7-u4w">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UY3-Y7-u4w" id="iAV-GH-5dv">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5Rq-f4-YBN" kind="show" id="Li5-Xb-WJB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JKx-Lz-4Hv" id="6lG-b4-KXi"/>
-                            <outlet property="delegate" destination="JKx-Lz-4Hv" id="ukc-gk-EqC"/>
-                        </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="mealsOfTheDay" destination="R4y-KQ-r9h" id="6fZ-jF-15x"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvN-z9-PQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-950"/>
+            <point key="canvasLocation" x="870" y="-942"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8PS-Lt-WYk">
@@ -392,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Z1-5L-JbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="-934"/>
+            <point key="canvasLocation" x="1524" y="-942"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="I0X-u0-IJa">
