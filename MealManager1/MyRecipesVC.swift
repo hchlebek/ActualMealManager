@@ -49,6 +49,12 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     self.presentViewController(myAlert, animated: true, completion: nil)
     }
     
+    @IBAction func editButtonTapped(sender: UIBarButtonItem)
+    {
+        myRecipesTableView.editing = !myRecipesTableView.editing
+    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let myTableViewCell = myRecipesTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
@@ -61,6 +67,28 @@ class MyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return recipes.count
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete
+        {
+            recipes.removeAtIndex(indexPath.row)
+            
+            myRecipesTableView.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        let items = recipes[sourceIndexPath.row]
+        recipes.removeAtIndex(sourceIndexPath.row)
+        recipes.insert(items, atIndex: destinationIndexPath.row)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

@@ -35,6 +35,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         myTableViewCell.textLabel?.text = daysArray[indexPath.row]
         return myTableViewCell
     }
+    
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    //{
+      //  let plannedRecipesVC = segue.destinationViewController as! PlannedRecipesVC
+        //let selectedRow = calendarTableView.indexPathForSelectedRow?.row
+        //plannedRecipesVC.dayChosen = daysArray[selectedRow!]
+    //}
 
 
 

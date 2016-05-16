@@ -27,6 +27,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="5CW-bq-TeR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="2WX-OF-FZB">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="Wi7-YB-WSk" id="AL7-uj-654"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="M1K-Ak-fze">
                             <connections>
                                 <action selector="addButtonTapped:" destination="Wi7-YB-WSk" id="bT6-f9-w1k"/>
@@ -386,15 +391,21 @@
         <scene sceneID="8PS-Lt-WYk">
             <objects>
                 <viewController id="5Rq-f4-YBN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0mD-WA-p4K"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qx6-O2-Dfm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Te-ae-m9L">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K3z-gt-Off">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="plannedRecipes" id="TKt-VE-GpE">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TKt-VE-GpE" id="DSn-yb-XKE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Z1-5L-JbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
