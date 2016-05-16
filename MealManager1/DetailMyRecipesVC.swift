@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate
+class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     
     var myRecipes : Recipe!
@@ -30,6 +30,8 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        imagePicker.delegate = self
+        
         myRecipeTableView.dataSource = self
         myRecipeTableView.delegate = self
         
@@ -43,6 +45,7 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
     {
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
@@ -51,14 +54,18 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
         { () -> Void in
             let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             self.myRecipeImageView.image = selectedImage
+            
         }
 
     }
+
+    
     
     @IBAction func myRecipeAddButtonTapped(sender: UIButton)
     {
         myRecipes.ingredientsArray.append(myRecipeTextField.text!)
         myRecipeTextField.text = ""
+        myRecipeTextField.resignFirstResponder()
         
         myRecipeTableView.reloadData()
     }
@@ -74,6 +81,7 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
     @IBAction func saveButtonTapped(sender: AnyObject)
     {
         myRecipes.instructions = myRecipeInstructions.text!
+        myRecipes.image = myRecipeImageView.image
     }
     
     
@@ -84,7 +92,7 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell3 = self.myRecipeTableView.dequeueReusableCellWithIdentifier("detailDiscover", forIndexPath: indexPath)
+        let cell3 = self.myRecipeTableView.dequeueReusableCellWithIdentifier("cell3", forIndexPath: indexPath)
         cell3.textLabel?.text = myRecipes.ingredientsArray[indexPath.row]
         
         
@@ -92,6 +100,28 @@ class DetailMyRecipesVC: UIViewController, UITableViewDataSource, UITableViewDel
         
         
         return cell3
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete
+        {
+            myRecipes.ingredientsArray.removeAtIndex(indexPath.row)
+            
+            myRecipeTableView.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        let ingredients = myRecipes.ingredientsArray[sourceIndexPath.row]
+        myRecipes.ingredientsArray.removeAtIndex(sourceIndexPath.row)
+        myRecipes.ingredientsArray.insert(ingredients, atIndex: destinationIndexPath.row)
     }
 
     
