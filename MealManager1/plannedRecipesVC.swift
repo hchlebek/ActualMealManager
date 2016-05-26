@@ -10,7 +10,7 @@ import UIKit
 
 class plannedRecipesVC: UITableViewController
 {
-    var dayChosen : String = ""
+    var dayChosen2 : String = ""
     
     override func viewDidLoad()
     {
@@ -20,37 +20,37 @@ class plannedRecipesVC: UITableViewController
     
     func checkWhatDay()
     {
-        if dayChosen == "Monday"
+        if dayChosen2 == "Monday"
         {
           
         }
         
-        if dayChosen == "Tuesday"
+        if dayChosen2 == "Tuesday"
         {
             
         }
         
-        if dayChosen == "Wednesday"
+        if dayChosen2 == "Wednesday"
         {
             
         }
         
-        if dayChosen == "Thursday"
+        if dayChosen2 == "Thursday"
         {
             
         }
         
-        if dayChosen == "Friday"
+        if dayChosen2 == "Friday"
         {
             
         }
         
-        if dayChosen == "Saturday"
+        if dayChosen2 == "Saturday"
         {
             
         }
         
-        if dayChosen == "Sunday"
+        if dayChosen2 == "Sunday"
         {
             
         }

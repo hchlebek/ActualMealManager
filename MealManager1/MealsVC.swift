@@ -14,6 +14,7 @@ class MealsVC: UITableViewController
     @IBOutlet var mealsOfTheDay: UITableView!
     
     var mealsArray = ["Breakfast", "Lunch", "Snacks", "Dinner"]
+    var dayChosen : String = ""
     
     override func viewDidLoad()
     {
@@ -37,5 +38,10 @@ class MealsVC: UITableViewController
     }
     
 
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    //{
+        //let plannedVC = segue.destinationViewController as! plannedRecipesVC
+        //plannedVC.dayChosen2 = dayChosen
+   // }
 
 }

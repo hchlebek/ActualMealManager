@@ -36,12 +36,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return myTableViewCell
     }
     
-    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    //{
-      //  let plannedRecipesVC = segue.destinationViewController as! PlannedRecipesVC
-        //let selectedRow = calendarTableView.indexPathForSelectedRow?.row
-        //plannedRecipesVC.dayChosen = daysArray[selectedRow!]
-    //}
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let mealsVC = segue.destinationViewController as! MealsVC
+        let selectedRow = calendarTableView.indexPathForSelectedRow?.row
+        mealsVC.dayChosen = daysArray[selectedRow!]
+    }
 
 
 

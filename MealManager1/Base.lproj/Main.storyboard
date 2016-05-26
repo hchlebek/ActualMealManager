@@ -266,13 +266,7 @@
                             <constraint firstItem="G76-1P-Vxj" firstAttribute="width" secondItem="Jq6-uX-deE" secondAttribute="width" id="mWW-pI-1zv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HWm-lJ-olo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="z3D-l0-pMT">
-                            <connections>
-                                <action selector="addButtonTapped:" destination="hhW-Jz-xXp" id="HOC-sA-5DQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="HWm-lJ-olo"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
